@@ -1,2 +1,1 @@
-# revolution-academy
- 
+# Revolution Academy
