@@ -1,11 +1,13 @@
-
 // responsive nav-bar
-bars = document.querySelector(".bars");
-bars.onclick = function(){
-    navBar = document.querySelector(".nav-bar");
-    navBar.classList.toggle("active");
-}
+const bars = document.querySelector(".bars");
+const navBar = document.querySelector(".nav-bar");
+const lines = document.querySelectorAll(".line");
+
+bars.onclick = function () {
+  navBar.classList.toggle("active");
+  lines.forEach((line) => {
+    line.classList.toggle("active");
+  });
+};
 
 // swiper
-
-

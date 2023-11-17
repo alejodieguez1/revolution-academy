@@ -6,17 +6,20 @@
     <title>Revolution Academy</title>
     <link rel="stylesheet" href="/styles/normalize.css" />
     <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header>
       <div class="logo">
-        <img src="assets/revolution-logo-white.png" alt="" srcset="">
+        <img src="assets/revolution-logo-white.png" alt="" srcset="" />
       </div>
       <div class="bars">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+        <span class="line" id="line-1"></span>
+        <span class="line" id="line-2"></span>
+        <span class="line" id="line-3"></span>
       </div>
 
       <nav class="nav-bar">
@@ -32,60 +35,65 @@
           </li>
         </ul>
       </nav>
-
     </header>
     <div class="hero">
       <div class="hero-text">
         <p>
-          Aprende como operar en los mercados financieros y convertite en un trader rentable
+          Aprende como operar en los mercados financieros y convertite en un
+          trader rentable
         </p>
       </div>
     </div>
-<!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide"><img src="assets/slider photos/pexels-pixabay-147411.jpg" alt=""></div>
-    <div class="swiper-slide"><img src="assets/slider photos/iStock-971053374.webp" alt=""></div>
-    <div class="swiper-slide"><img src="assets/slider photos/Sin título.jpeg" alt=""></div>
-    ...
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="assets/slider photos/pexels-pixabay-147411.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/slider photos/iStock-971053374.webp" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="assets/slider photos/Sin título.jpeg" alt="" />
+        </div>
+        ...
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
 
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
 
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
-</div>
-
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
   </body>
   <script src="/scripts/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
-    const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
+    const swiper = new Swiper(".swiper", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+
+      // If we need pagination
+      pagination: {
+        el: ".swiper-pagination",
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      // And if we need scrollbar
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    });
   </script>
 </html>
