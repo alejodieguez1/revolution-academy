@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Gotham Md";
+  src: url("../assets/fonts/Gotham-Medium.otf");
+}
+@font-face {
+  font-family: "Gotham Bold";
+  src: url("../assets/fonts/Gotham-Bold.otf");
+}
+
 .logo img {
   width: 80px;
 }
@@ -50,6 +59,7 @@ header {
   margin: 0 5px;
   background: transparent;
   text-decoration: none;
+  font-family: "Gotham Md";
 }
 .nav-bar.active {
   height: 80%;
