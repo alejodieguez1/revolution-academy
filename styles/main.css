@@ -1,31 +1,67 @@
 @font-face {
-  font-family: "Gotham Md";
-  src: url("../assets/fonts/Gotham-Medium.otf");
+  font-family: "Mulish Md";
+  src: url("../assets/fonts/Mulish-Medium.ttf");
 }
 @font-face {
-  font-family: "Gotham Bold";
-  src: url("../assets/fonts/Gotham-Bold.otf");
+  font-family: "Mulish Bold";
+  src: url("../assets/fonts/Mulish-Bold.ttf");
 }
 
-.logo img {
-  width: 80px;
+*{
+  font-family:"Mulish Bold" ;
 }
-body {
-  background: #0f0f0f;
-}
+
+/* glowing efect */
+
 header {
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgb(199, 199, 199);
+  /* background: #c7c7c7;
   background: linear-gradient(
     180deg,
-    rgba(199, 199, 199, 0.18663594470046085) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+    #c7c7c730 0%,
+    #ffffff00 100%
+  ); */
+  background: linear-gradient(45deg, #ebe9e956 , #000000  100%,#0f0f0f);
+  background-size: 300% 300%;
+  animation: color 5s alternate-reverse ;
   padding: 0 20px;
 }
+
+
+@keyframes color{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 90% 50%;
+  }
+  100%{
+    background-position: 90% 50%;
+  }
+}
+
+
+
+/* ------------------------ */
+.logo{
+  display: flex;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 40px;
+  margin-right: -5px;
+}
+body {
+  background: rgb(50,50,50);
+  background: linear-gradient(180deg, rgba(50,50,50,1) 6%, rgba(9,9,9,1) 100%); 
+  height: 100vh;
+}
+
 .logo img {
   width: 60px;
 }
@@ -54,12 +90,12 @@ header {
   font-size: 18px;
   padding: 10px 30px;
   border-radius: 20px;
-  border: 1px solid #06c8fd;
+  border: 1px solid #648189;
   transition: 0.2s;
   margin: 0 5px;
   background: transparent;
   text-decoration: none;
-  font-family: "Gotham Md";
+  font-family:"Mulish Bold" ;
 }
 .nav-bar.active {
   height: 80%;
@@ -139,6 +175,25 @@ header {
   height: 300px;
   border-radius: 15px;
 }
+.swiper-button-prev{
+  color: transparent !important;
+}
+.swiper-button-next{
+  color: transparent !important;
+}
+
+/* social */
+
+.social{
+  display: flex;
+  justify-content: center;
+
+}
+
+.fa-instagram{
+  color: #ffffff;
+  display: block;
+}
 
 @media screen and (min-width: 1024px) {
   .bars {
@@ -149,10 +204,14 @@ header {
     height: 100px;
     top: auto;
     left: auto;
-    right: auto;
+    right: 5%;
     background: transparent;
     box-shadow: none;
     width: auto;
+  }
+  .logo{
+    position: relative;
+    left: 5%;
   }
   .nav-bar ul {
     height: 100%;
@@ -163,5 +222,99 @@ header {
   }
   .nav-bar ul li a {
     margin: 0;
+    border: none;
+    position: relative;
+    padding-bottom: 10px;
   }
+  .nav-bar ul li a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #06c7fd1d;
+    transition: width 0.25s ease-out;
+  }
+  .nav-bar ul li a:hover::before{
+    width: 100%;
+  }
+  /* .nav-bar ul li a.active{
+    background: #06c7fd1d;
+  } */
+  .social{
+    display:none;
+  }
+  .swiper{
+    height: 600px;
+    width: 50%;
+    margin-right: 5% !important;
+  }
+  .swiper img{
+    display: block;
+    object-fit: cover;
+    object-position: bottom, center;
+  }
+  .hero{
+    margin: 1% 30px 10% 5% ;
+  }
+  .hero-text{
+    width: 100%;
+    text-align: start;
+    font-size: 20px;
+    width: 60%;
+    margin-left: 4%;
+  }
+  .text-and-swiper{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8%;
+  }
+  .h2-title{
+    font-size: 50px;
+    margin-left: 0;
+    text-align: start;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding: 3%;
+  }
+  hr {
+    width: 0; 
+    border: none; 
+    border-top: 2px solid #3498db57; 
+    animation: animacion-hr 5s ease forwards ; 
+  }
+  
+  @keyframes animacion-hr {
+    0% {
+      width: 0; 
+    }
+    100% {
+      width: 100%; 
+    }
+  }
+  .exclamation{
+    color: #3498db57;
+  }
+
+  .flecha {
+    position: relative;
+    display: inline-block;
+    opacity: 0; 
+    transform: translateX(-10px);
+    animation: aparecer 2s forwards; 
+    color:#3498db57 ;
+  }
+  @keyframes aparecer {
+    0% {
+      opacity: 0; /* Inicia con opacidad cero */
+      transform: translateX(-10px); /* Desplazamiento hacia la izquierda */
+    }
+    100% {
+      opacity: 1; /* Termina con opacidad completa */
+      transform: translateX(0); /* Sin desplazamiento, posición original */
+    }
+  }
+
 }

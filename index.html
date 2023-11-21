@@ -6,15 +6,13 @@
     <title>Revolution Academy</title>
     <link rel="stylesheet" href="/styles/normalize.css" />
     <link rel="stylesheet" href="/styles/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-  </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    </head>
   <body>
     <header>
       <div class="logo">
         <img src="assets/revolution-logo-white.png" alt="" srcset="" />
+        <h1>evolution</h1>
       </div>
       <div class="bars">
         <span class="line" id="line-1"></span>
@@ -34,42 +32,57 @@
             <a href="#">Nosotros</a>
           </li>
         </ul>
+        <div class="buttons">
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div class="Social">
+          
+        </div>
       </nav>
     </header>
-    <div class="hero">
-      <div class="hero-text">
-        <p>
-          Aprende como operar en los mercados financieros y convertite en un
-          trader rentable
-        </p>
+    <section class="text-and-swiper">
+      <div class="hero">
+        <h2 class="h2-title">SÉ PARTE DE LA REVOLUCIÓN<span class="exclamation">! </span></h2>
+        <hr>
+        <div class="hero-text">
+          <br>
+          <p>
+            Aprende como operar en los mercados financieros y convertite en un
+            trader rentable
+          </p>
+          <p class="sub-text">
+            
+            <div class="flecha">➜</div> El ecosistema Revolution te permite aprender a nivel profesional sobre los mercados financieros, mientras generas ganancias, incluso desde el primer día.
+          </p>
+          
+        </div>
       </div>
-    </div>
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <img src="assets/slider photos/pexels-pixabay-147411.jpg" alt="" />
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="assets/slider photos/pexels-pixabay-147411.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/slider photos/iStock-971053374.webp" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/slider photos/Sin título.jpeg" alt="" />
+          </div>
         </div>
-        <div class="swiper-slide">
-          <img src="assets/slider photos/iStock-971053374.webp" alt="" />
-        </div>
-        <div class="swiper-slide">
-          <img src="assets/slider photos/Sin título.jpeg" alt="" />
-        </div>
-        ...
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+  
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+  
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div>
+    </section>
   </body>
   <script src="/scripts/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -96,4 +109,5 @@
       },
     });
   </script>
+  <script src="https://kit.fontawesome.com/e1da6d2f95.js" crossorigin="anonymous"></script>
 </html>
