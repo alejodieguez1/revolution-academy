@@ -7,65 +7,51 @@
   src: url("../assets/fonts/Mulish-Bold.ttf");
 }
 
-*{
-  font-family:"Mulish Bold" ;
+* {
+  font-family: "Mulish Bold";
 }
-
+body {
+  background: #0f0f0f;
+  height: 100vh;
+}
 /* glowing efect */
 
-header {
+.header {
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background: #c7c7c7;
+  background: rgb(197, 197, 197);
   background: linear-gradient(
     180deg,
-    #c7c7c730 0%,
-    #ffffff00 100%
-  ); */
-  background: linear-gradient(45deg, #ebe9e956 , #000000  100%,#0f0f0f);
-  background-size: 300% 300%;
-  animation: color 5s alternate-reverse ;
+    rgba(197, 197, 197, 0.03804849576549374) 0%,
+    rgba(197, 197, 197, 0.03804849576549374) 50%,
+    rgba(197, 197, 197, 0) 100%
+  );
   padding: 0 20px;
 }
 
-
-@keyframes color{
-  0%{
-    background-position: 0% 50%;
-  }
-  50%{
-    background-position: 90% 50%;
-  }
-  100%{
-    background-position: 90% 50%;
-  }
-}
-
-
-
 /* ------------------------ */
-.logo{
+.header__logo {
   display: flex;
   color: #ffffff;
   justify-content: center;
   align-items: center;
+  gap: 3px;
 }
-.logo img {
+.header__logo img {
   width: 40px;
   margin-right: -5px;
 }
-body {
-  background: rgb(50,50,50);
-  background: linear-gradient(180deg, rgba(50,50,50,1) 6%, rgba(9,9,9,1) 100%); 
-  height: 100vh;
+.header__title {
+  text-transform: uppercase;
+  font-family: "Mulish Bold";
 }
 
-.logo img {
+.header__logo img {
   width: 60px;
 }
-.nav-bar {
+.header__nav {
   height: 0px;
   position: absolute;
   top: 80px;
@@ -78,13 +64,13 @@ body {
   z-index: 20;
   box-shadow: 0px 2px 5px #000000;
 }
-.nav-bar ul {
+.header__nav-items {
   display: flex;
   margin: 0;
   padding: 50px 0;
   list-style: none;
 }
-.nav-bar ul li a {
+.header__nav-item {
   display: block;
   color: #ffffff;
   font-size: 18px;
@@ -95,72 +81,74 @@ body {
   margin: 0 5px;
   background: transparent;
   text-decoration: none;
-  font-family:"Mulish Bold" ;
+  font-family: "Mulish Bold";
 }
-.nav-bar.active {
+.header__nav.active {
   height: 80%;
 }
-.nav-bar ul {
+.header__nav-items {
   transition: 0.5s;
   opacity: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.nav-bar.nav-bar.active ul {
+.header__nav.active .header__nav-items {
   opacity: 1;
 }
-.nav-bar ul li a {
+.header__nav-item {
   margin-bottom: 20px;
 }
 
-.bars {
+.header__hamburger {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.line {
+.hamburger__line {
   width: 30px;
   height: 3px;
   border-radius: 20px;
   background: #ffffff;
   transition: 0.3s;
 }
-#line-3.active {
+#hamburger__line-3.active {
   transition: 0.3s;
   transform: rotate(-35deg);
 }
-#line-1.active {
+#hamburger__line-1.active {
   transform: translate(0, 7.5px) rotate(45deg);
   transition: 0.3s ease-out;
 }
-#line-2.active {
+#hamburger__line-2.active {
   opacity: 0;
   transform: translate(-10px);
   transition: 0.2s;
 }
-#line-3.active {
+#hamburger__line-3.active {
   transform: translate(0, -6.2px) rotate(-45deg);
   transition: 0.3s ease-out;
 }
 
 /* section hero */
-.hero-text {
-  width: 100%;
-  text-align: center;
-}
-.hero {
+.hero__section {
   color: #ffffff;
-  margin: 5% 25%;
+  padding: 20px 20px;
 }
-.hero {
-  text-align: center;
+.hero__title,
+.hero__text {
+  margin: 0;
 }
-/* final hero */
-
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #ffffff;
+}
 /* swiper */
 .swiper {
-  width: 600px;
+  width: 90%;
   height: 300px;
   border-radius: 15px;
 }
@@ -170,151 +158,89 @@ body {
   height: 100%;
   width: 100%;
 }
-.swiper {
-  width: 70vw;
-  height: 300px;
-  border-radius: 15px;
-}
-.swiper-button-prev{
+.swiper-button-prev {
   color: transparent !important;
 }
-.swiper-button-next{
+.swiper-button-next {
   color: transparent !important;
 }
 
 /* social */
 
-.social{
+.social {
   display: flex;
   justify-content: center;
-
 }
 
-.fa-instagram{
+.fa-instagram {
   color: #ffffff;
   display: block;
 }
 
 @media screen and (min-width: 1024px) {
-  .bars {
+  .header {
+    padding: 0 100px;
+  }
+  .header__hamburger {
     display: none;
   }
-  .nav-bar {
+  .header__nav {
     position: relative;
     height: 100px;
     top: auto;
     left: auto;
-    right: 5%;
+    right: auto;
     background: transparent;
     box-shadow: none;
     width: auto;
   }
-  .logo{
-    position: relative;
-    left: 5%;
-  }
-  .nav-bar ul {
+  .header__nav-items {
     height: 100%;
     flex-direction: row;
     gap: 30px;
     padding: 0;
     opacity: 1;
   }
-  .nav-bar ul li a {
+  .header__nav-item {
     margin: 0;
     border: none;
     position: relative;
-    padding-bottom: 10px;
+    padding: 0;
   }
-  .nav-bar ul li a::before{
-    content: '';
+  .header__nav-item::before {
+    content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 30px;
     width: 0;
     height: 2px;
-    background-color: #06c7fd1d;
+    background-color: #fff;
     transition: width 0.25s ease-out;
   }
-  .nav-bar ul li a:hover::before{
+  .header__nav-item:hover::before {
     width: 100%;
   }
-  /* .nav-bar ul li a.active{
-    background: #06c7fd1d;
-  } */
-  .social{
-    display:none;
+  .social {
+    display: none;
   }
-  .swiper{
-    height: 600px;
-    width: 50%;
-    margin-right: 5% !important;
-  }
-  .swiper img{
+  .swiper img {
     display: block;
     object-fit: cover;
     object-position: bottom, center;
   }
-  .hero{
-    margin: 1% 30px 10% 5% ;
+  .hero__section {
+    padding: 80px 100px;
   }
-  .hero-text{
-    width: 100%;
-    text-align: start;
-    font-size: 20px;
-    width: 60%;
-    margin-left: 4%;
+  .hero__container {
+    flex-direction: row;
+    gap: 40px;
   }
-  .text-and-swiper{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 8%;
-  }
-  .h2-title{
+  .hero__title {
     font-size: 50px;
-    margin-left: 0;
-    text-align: start;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    padding: 3%;
+    max-width: 500px;
   }
-  hr {
-    width: 0; 
-    border: none; 
-    border-top: 2px solid #3498db57; 
-    animation: animacion-hr 5s ease forwards ; 
+  .hero__text {
+    font-size: 18px;
+    max-width: 570px;
   }
-  
-  @keyframes animacion-hr {
-    0% {
-      width: 0; 
-    }
-    100% {
-      width: 100%; 
-    }
-  }
-  .exclamation{
-    color: #3498db57;
-  }
-
-  .flecha {
-    position: relative;
-    display: inline-block;
-    opacity: 0; 
-    transform: translateX(-10px);
-    animation: aparecer 2s forwards; 
-    color:#3498db57 ;
-  }
-  @keyframes aparecer {
-    0% {
-      opacity: 0; /* Inicia con opacidad cero */
-      transform: translateX(-10px); /* Desplazamiento hacia la izquierda */
-    }
-    100% {
-      opacity: 1; /* Termina con opacidad completa */
-      transform: translateX(0); /* Sin desplazamiento, posición original */
-    }
-  }
-
 }

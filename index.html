@@ -6,57 +6,49 @@
     <title>Revolution Academy</title>
     <link rel="stylesheet" href="/styles/normalize.css" />
     <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    </head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
   <body>
-    <header>
-      <div class="logo">
+    <header class="header">
+      <div class="header__logo">
         <img src="assets/revolution-logo-white.png" alt="" srcset="" />
-        <h1>evolution</h1>
+        <h2 class="header__title">Revolution</h2>
       </div>
-      <div class="bars">
-        <span class="line" id="line-1"></span>
-        <span class="line" id="line-2"></span>
-        <span class="line" id="line-3"></span>
+      <div class="header__hamburger">
+        <span class="hamburger__line" id="hamburger__line-1"></span>
+        <span class="hamburger__line" id="hamburger__line-2"></span>
+        <span class="hamburger__line" id="hamburger__line-3"></span>
       </div>
 
-      <nav class="nav-bar">
-        <ul>
-          <li>
-            <a href="#" class="active">Inicio</a>
-          </li>
-          <li>
-            <a href="#">Contacto</a>
-          </li>
-          <li>
-            <a href="#">Nosotros</a>
-          </li>
-        </ul>
+      <nav class="header__nav">
+        <div class="header__nav-items">
+          <a href="#" class="active header__nav-item">Inicio</a>
+          <a href="#" class="header__nav-item">Contacto</a>
+          <a href="#" class="header__nav-item">Nosotros</a>
+        </div>
         <div class="buttons">
           <a href=""><i class="fa-brands fa-instagram"></i></a>
         </div>
-        <div class="Social">
-          
-        </div>
+        <div class="Social"></div>
       </nav>
     </header>
-    <section class="text-and-swiper">
-      <div class="hero">
-        <h2 class="h2-title">SÉ PARTE DE LA REVOLUCIÓN<span class="exclamation">! </span></h2>
-        <hr>
-        <div class="hero-text">
-          <br>
-          <p>
-            Aprende como operar en los mercados financieros y convertite en un
-            trader rentable
-          </p>
-          <p class="sub-text">
-            
-            <div class="flecha">➜</div> El ecosistema Revolution te permite aprender a nivel profesional sobre los mercados financieros, mientras generas ganancias, incluso desde el primer día.
-          </p>
-          
-        </div>
+    <section class="hero__section">
+      <div class="hero__container">
+        <h2 class="hero__title">FORMA PARTE DE LA REVOLUCIÓN</h2>
+        <p class="hero__text">
+          Aprende como operar en los mercados financieros y convertite en un
+          trader rentable
+          <br />
+          El ecosistema Revolution te permite aprender a nivel profesional sobre
+          los mercados financieros, mientras generas ganancias, incluso desde el
+          primer día.
+        </p>
       </div>
+    </section>
+    <section class="about">
       <!-- Slider main container -->
       <div class="swiper">
         <!-- Additional required wrapper -->
@@ -74,11 +66,11 @@
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
-  
+
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-  
+
         <!-- If we need scrollbar -->
         <div class="swiper-scrollbar"></div>
       </div>
@@ -109,5 +101,8 @@
       },
     });
   </script>
-  <script src="https://kit.fontawesome.com/e1da6d2f95.js" crossorigin="anonymous"></script>
+  <script
+    src="https://kit.fontawesome.com/e1da6d2f95.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
