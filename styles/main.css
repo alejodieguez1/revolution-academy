@@ -96,7 +96,16 @@ body {
 .header__nav-item {
   margin-bottom: 20px;
 }
-
+.nav__socials{
+  display: flex;
+  padding-left: 0;
+  justify-content: center;
+  gap: 5px;
+}
+.nav__socials{
+  list-style: none;
+  text-decoration: none;
+}
 .header__hamburger {
   display: flex;
   flex-direction: column;
