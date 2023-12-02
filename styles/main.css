@@ -1,0 +1,255 @@
+@font-face {
+  font-family: "Mulish Md";
+  src: url("../assets/fonts/Mulish-Medium.ttf");
+}
+@font-face {
+  font-family: "Mulish Bold";
+  src: url("../assets/fonts/Mulish-Bold.ttf");
+}
+
+* {
+  font-family: "Mulish Bold";
+}
+body {
+  background: #0f0f0f;
+}
+
+.header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  transition: 0.1s;
+  position: relative;
+  z-index: 2;
+}
+.header.active {
+  background: #0f0f0f;
+  transition: 0.1s;
+}
+
+/* ------------------------ */
+.header__logo {
+  display: flex;
+  color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  z-index: 5;
+}
+.header__logo img {
+  width: 40px;
+  margin-right: -5px;
+}
+.header__title {
+  text-transform: uppercase;
+  font-family: "Mulish Bold";
+}
+
+.header__logo img {
+  width: 60px;
+}
+.header__nav-mobile {
+  height: 0px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #0f0f0f;
+  transition: 0.5s;
+  overflow: hidden;
+  z-index: 20;
+  box-shadow: 0px 2px 5px #000000;
+}
+.header__nav-items {
+  margin: 0;
+  padding: 50px 0;
+  list-style: none;
+  transition: 0.5s;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header__nav-item {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  transition: 0.2s;
+  margin: 0 5px;
+  background: transparent;
+  text-decoration: none;
+  font-family: "Mulish Bold";
+}
+.header__nav-mobile.active {
+  height: 80%;
+}
+.header__nav-mobile.active .header__nav-items {
+  opacity: 1;
+}
+.header__nav-item {
+  margin-bottom: 20px;
+}
+.header__hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 5;
+}
+.hamburger__line {
+  width: 30px;
+  height: 3px;
+  border-radius: 20px;
+  background: #ffffff;
+  transition: 0.3s;
+}
+#hamburger__line-3.active {
+  transition: 0.3s;
+  transform: rotate(-35deg);
+}
+#hamburger__line-1.active {
+  transform: translate(0, 7.5px) rotate(45deg);
+  transition: 0.3s ease-out;
+}
+#hamburger__line-2.active {
+  opacity: 0;
+  transform: translate(-10px);
+  transition: 0.2s;
+}
+#hamburger__line-3.active {
+  transform: translate(0, -6.2px) rotate(-45deg);
+  transition: 0.3s ease-out;
+}
+.header__socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.fa-instagram {
+  color: #ffffff;
+  display: block;
+}
+
+.header__nav-desktop-items {
+  display: none;
+}
+/* section hero */
+.hero__section {
+  color: #ffffff;
+  padding: 20px 20px;
+  height: 400px;
+  position: relative;
+}
+.hero__section-bg {
+  position: absolute;
+  object-fit: cover;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: opacity 2s;
+}
+.hero__section-bg.active {
+  transition: opacity 0.2s;
+}
+.hero__title,
+.hero__text {
+  margin: 0;
+}
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #ffffff;
+  z-index: 10;
+  position: relative;
+}
+/* swiper */
+.swiper {
+  width: 90%;
+  height: 300px;
+  border-radius: 15px;
+}
+.swiper img {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.swiper-button-prev {
+  color: transparent !important;
+}
+.swiper-button-next {
+  color: transparent !important;
+}
+
+@media screen and (min-width: 658px) {
+  .hero__container {
+    padding-bottom: 120px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    padding: 0 100px;
+  }
+  .header__hamburger {
+    display: none;
+  }
+  .header__nav-mobile {
+    display: none;
+  }
+  .header__nav-desktop-items {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 0;
+    color: #fff;
+  }
+  .header__nav-desktop-item {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .header__nav-desktop-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.25s ease-out;
+  }
+  .header__nav-desktop-item:hover::before {
+    width: 100%;
+  }
+  .swiper img {
+    display: block;
+    object-fit: cover;
+    object-position: bottom, center;
+  }
+  .hero__section {
+    padding: 80px 100px;
+  }
+  .hero__container {
+    padding-bottom: 180px;
+    flex-direction: row;
+    gap: 40px;
+  }
+  .hero__title {
+    font-size: 50px;
+    max-width: 500px;
+  }
+  .hero__text {
+    font-size: 18px;
+    max-width: 570px;
+  }
+}
