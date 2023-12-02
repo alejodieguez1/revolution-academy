@@ -22,21 +22,11 @@
         <span class="hamburger__line" id="hamburger__line-2"></span>
         <span class="hamburger__line" id="hamburger__line-3"></span>
       </div>
-
-      <nav class="header__nav">
-        <div class="header__nav-items">
-          <a href="#" class="active header__nav-item">Inicio</a>
-          <a href="#" class="header__nav-item">Contacto</a>
-          <a href="#" class="header__nav-item">Nosotros</a>
-        </div>
-        <div class="buttons">
-          <ul class="nav__socials">
-            <li> <a href=""><i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i></a> </li>
-            <li> <a href=""><i class="fa-brands fa-x-twitter fa-xl" style="color: #ffffff;"></i></a> </li>
-            <li> <a href=""><i class="fa-brands fa-whatsapp fa-xl" style="color: #ffffff;"></i></a> </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="header__nav-desktop-items">
+        <a href="#" class="header__nav-desktop-item">Inicio</a>
+        <a href="#" class="header__nav-desktop-item">Contacto</a>
+        <a href="#" class="header__nav-desktop-item">Nosotros</a>
+      </div>
     </header>
     <section class="hero__section">
       <img src="/assets/hero-background.png" alt="" class="hero__section-bg" />
@@ -82,10 +72,15 @@
 
     <footer class="footer page__footer">
       <div class="footer__logo">
-        <img src="assets/revolution-logo-white.png" alt="" srcset="" />
+        <img
+          src="assets/revolution-logo-white.png"
+          alt=""
+          srcset=""
+          width="120px"
+        />
         <h2 class="footer__title">Revolution</h2>
       </div>
-      
+
       <div class="footer__items-container">
         <div class="footer__hamburguer">
           <ul class="footer__hamburguer-items">
@@ -96,13 +91,34 @@
         </div>
         <div class="footer__items">
           <ul class="footer__socials">
-            <li><i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i> <a href="">Instagram</a> </li>
-            <li><i class="fa-brands fa-x-twitter fa-xl" style="color: #ffffff;"></i> <a href="">X</a> </li>
-            <li><i class="fa-brands fa-whatsapp fa-xl" style="color: #ffffff;"></i>  <a href="">Whatsapp</a> </li>
+            <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff"></i>
+            <a href="">Instagram</a>
+            <i class="fa-brands fa-x-twitter fa-xl" style="color: #ffffff"></i>
+            <a href="">X</a>
+            <i class="fa-brands fa-whatsapp fa-xl" style="color: #ffffff"></i>
+            <a href="">Whatsapp</a>
           </ul>
         </div>
       </div>
     </footer>
+    <nav class="header__nav-mobile">
+      <div class="header__nav-items">
+        <a href="#" class="active header__nav-item">Inicio</a>
+        <a href="#" class="header__nav-item">Contacto</a>
+        <a href="#" class="header__nav-item">Nosotros</a>
+      </div>
+      <div class="header__socials">
+        <a href=""
+          ><i class="fa-brands fa-instagram fa-xl" style="color: #ffffff"></i
+        ></a>
+        <a href=""
+          ><i class="fa-brands fa-x-twitter fa-xl" style="color: #ffffff"></i
+        ></a>
+        <a href=""
+          ><i class="fa-brands fa-whatsapp fa-xl" style="color: #ffffff"></i
+        ></a>
+      </div>
+    </nav>
   </body>
   <script src="/scripts/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
