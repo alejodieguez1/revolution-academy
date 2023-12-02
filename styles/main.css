@@ -73,7 +73,7 @@ body {
   font-size: 18px;
   padding: 10px 30px;
   border-radius: 20px;
-  border: 1px solid #648189;
+  border: 1px solid #fff;
   transition: 0.2s;
   margin: 0 5px;
   background: transparent;
@@ -96,13 +96,13 @@ body {
 .header__nav-item {
   margin-bottom: 20px;
 }
-.nav__socials{
+.nav__socials {
   display: flex;
   padding-left: 0;
   justify-content: center;
   gap: 5px;
 }
-.nav__socials{
+.nav__socials {
   list-style: none;
   text-decoration: none;
 }
