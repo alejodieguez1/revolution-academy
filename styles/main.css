@@ -231,6 +231,7 @@ body {
 .social i {
   color: #000000 !important;
   font-size: 25px; 
+  padding: 10px;
 }
 .logo,
 .socials,
@@ -241,9 +242,6 @@ body {
 }
 .contact{
   color: #ffffff;
-}
-.social i{
-padding:10px;
 }
 
 
