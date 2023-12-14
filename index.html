@@ -61,31 +61,59 @@
       </div>
     </section>
     <section class="about">
-      <!-- Slider main container -->
       <div class="swiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide">
-            <img src="assets/slider photos/pexels-pixabay-147411.jpg" alt="" />
+            <div class="swipper__test1">
+              <p>“Revolution no solo me proporcionó conocimientos sólidos en trading, sino que también me dio la confianza para aplicar mis estrategias de manera efectiva. Hoy, veo resultados reales”</p>
+              <div class="Testimonials__bar">
+                <p>Marcos Gz</p>
+                <div class="Testimonial_bar"></div>
+              </div>
+              
+            </div>
+            <div class="swipper__1img">
+              <img src="assets/slider photos/Marcos Gutierrez-1_-2Recortada.jpg" alt="">
+            </div>
           </div>
           <div class="swiper-slide">
-            <img src="assets/slider photos/iStock-971053374.webp" alt="" />
+            <div class="swipper__test1">
+              <p>"Lo que más valoro de Revolution es la comunidad comprometida y solidaria. Aprendí no solo de los materiales, sino también de otros traders con resultados”</p>
+              <div class="Testimonials__bar">
+                <p>Lucas Gz</p>
+                <div class="Testimonial_bar"></div>
+              </div>
+              
+            </div>
+            <div class="swipper__1img">
+              <img src="assets/slider photos/Marcos Gutierrez-1_-2Recortada.jpg" alt="">
+
+            </div>
           </div>
           <div class="swiper-slide">
-            <img src="assets/slider photos/Sin título.jpeg" alt="" />
+            <div class="swipper__test1">
+              <p>“Hasta que encontré Revolution, el trading era un territorio desconocido para mí. Gracias a su enfoque claro y recursos accesibles, ahora estoy en camino de alcanzar mis metas financieras”</p>
+              <div class="Testimonials__bar">
+                <p>Matias Dechand</p>
+                <div class="Testimonial_bar"></div>
+              </div>
+            </div>
+            <div class="swipper__1img">
+              <img src="assets/slider photos/Marcos Gutierrez-1_-2Recortada.jpg" alt="">
+            </div>
           </div>
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
-
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-
         <!-- If we need scrollbar -->
         <div class="swiper-scrollbar"></div>
       </div>
+      
     </section>
 
     <footer class="footer page__footer">
@@ -130,7 +158,7 @@
       // Optional parameters
       direction: "horizontal",
       loop: true,
-
+      spaceBetween:0,
       // If we need pagination
       pagination: {
         el: ".swiper-pagination",
@@ -141,6 +169,10 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+      autoplay: {
+    delay: 5000, 
+    disableOnInteraction: false, 
+  },
 
       // And if we need scrollbar
       scrollbar: {

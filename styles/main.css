@@ -174,9 +174,12 @@ body {
 }
 /* swiper */
 .swiper {
-  width: 90%;
-  height: 300px;
+  height: fit-content;
+  background: transparent;
+  margin: 0 auto;
   border-radius: 15px;
+  color: #ffffff;
+
 }
 .swiper img {
   display: block;
@@ -184,12 +187,52 @@ body {
   height: 100%;
   width: 100%;
 }
-.swiper-button-prev {
-  color: transparent !important;
+
+.swiper-slide{
+  display: flex !important;
+  flex-direction: column-reverse;
+  align-items: center;
+  text-align: center;
+  
 }
-.swiper-button-next {
-  color: transparent !important;
+
+.swipper__test1{
+  padding: 10px;
 }
+.swipper__1img {
+  max-width: 250px; 
+  padding: 10px;
+}
+
+
+.swipper__1img img {
+  border-radius: 50%; 
+  max-width: 100%; 
+  height: auto; 
+  object-fit: cover;
+  display: block;
+}
+
+
+.swiper-pagination{
+  color: #ffffff !important;
+}
+.swiper-button-prev,
+.swiper-button-next{
+  display: none !important;
+}
+/* Oculta el scrollbar */
+.swiper-scrollbar {
+  display: none;
+}
+.swiper-pagination-bullet {
+  background-color: #6a6a6a !important;
+}
+  
+.swiper-pagination-bullet-active {
+  background-color: #ffffff !important; 
+}
+
 
 /* footer */
 .footer{
@@ -287,11 +330,7 @@ body {
   .header__nav-desktop-item:hover::before {
     width: 100%;
   }
-  .swiper img {
-    display: block;
-    object-fit: cover;
-    object-position: bottom, center;
-  }
+  
   .hero__section {
     padding: 80px 100px;
   }
@@ -380,6 +419,53 @@ body {
   .social {
     display: flex;
     justify-content: space-around;
+}
+
+/* swipper */
+
+
+.swiper-slide {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center ;
+  justify-content: center; 
+  
+}
+
+
+.swipper__test1 {
+  flex: 1; 
+  max-width: 60%; 
+  padding: 20px; 
+  text-align: start;
+  font-size: 45px;
+}
+.Testimonials__bar{
+  display: flex;
+  align-items:baseline;
+  
+}
+.Testimonial_bar {
+	height: 1px;
+	width: 60%;
+	background: #ffffff;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+  margin-left: 5%;
+}
+.swipper__1img {
+  max-width: 450px; 
+}
+
+
+.swipper__1img img {
+  border-radius:50%; 
+  max-width: 100%; 
+  height: auto; 
+  object-fit: cover;
+  display: block;
 }
 
 
