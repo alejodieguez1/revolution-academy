@@ -12,7 +12,7 @@
     />
   </head>
   <body>
-    <header class="header">
+    <header class="header site-container">
       <div class="header__logo">
         <img src="assets/revolution-logo-white.png" alt="" srcset="" />
         <h2 class="header__title">Revolution</h2>
@@ -46,13 +46,15 @@
         ></a>
       </div>
     </nav>
-    <section class="hero__section">
+    <section class="hero__section site-container">
       <img src="/assets/hero-background.png" alt="" class="hero__section-bg" />
       <div class="hero__container">
-        <h2 class="hero__title">FORMA PARTE DE LA REVOLUCIÓN</h2>
+        <h2 class="hero__title">
+          FORMA PARTE DE <span class="hero__title-span">LA REVOLUCIÓN</span>
+        </h2>
         <p class="hero__text">
           Aprende como operar en los mercados financieros y convertite en un
-          trader rentable
+          trader rentable.
           <br />
           El ecosistema Revolution te permite aprender a nivel profesional sobre
           los mercados financieros, mientras generas ganancias, incluso desde el
@@ -60,94 +62,82 @@
         </p>
       </div>
     </section>
-    <section class="about">
-      <!-- Slider main container -->
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <img src="assets/slider photos/pexels-pixabay-147411.jpg" alt="" />
+    <section class="video__section site-container">
+      <div class="video__section-container">
+        <site-video class="video__section-video">
+          <div class="video__section-buttons">
+            <button class="video__section-button" data-button="play">
+              <svg
+                width="80"
+                height="80"
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M32 58L56 40L32 22V58ZM40 0C17.92 0 0 17.92 0 40C0 62.08 17.92 80 40 80C62.08 80 80 62.08 80 40C80 17.92 62.08 0 40 0ZM40 72C22.36 72 8 57.64 8 40C8 22.36 22.36 8 40 8C57.64 8 72 22.36 72 40C72 57.64 57.64 72 40 72Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+            <button class="video__section-button" data-button="pause">
+              <svg
+                width="80"
+                height="80"
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M28 56H36V24H28V56ZM40 0C17.92 0 0 17.92 0 40C0 62.08 17.92 80 40 80C62.08 80 80 62.08 80 40C80 17.92 62.08 0 40 0ZM40 72C22.36 72 8 57.64 8 40C8 22.36 22.36 8 40 8C57.64 8 72 22.36 72 40C72 57.64 57.64 72 40 72ZM44 56H52V24H44V56Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
           </div>
-          <div class="swiper-slide">
-            <img src="assets/slider photos/iStock-971053374.webp" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/slider photos/Sin título.jpeg" alt="" />
-          </div>
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
+          <video width="auto" height="auto" class="video__section-vid">
+            <source src="/assets/marcos-video.mp4" type="video/mp4" />
+          </video>
+        </site-video>
+      </div>
+      <div class="cta__section">
+        <h3 class="cta__section-text">
+          ¿Listo para empezar tu viaje hacia el éxito financiero?
+        </h3>
+        <a href="" class="cta__section-button">Quiero ser parte</a>
       </div>
     </section>
 
-    <footer class="footer page__footer">
-      <div class="footer_group">
-        <div class="socials">
-          <!-- <h3>Siguenos</h3> -->
-          <div class="social">
-            
-              <a href=""
-              ><i class="fa-brands ig fa-instagram fa-xl" style="color: #ffffff"></i
-            ></a>
-            <a href=""
-              ><i class="fa-brands  fa-x-twitter fa-xl" style="color: #ffffff"></i
-            ></a>
-            <a href=""
-              ><i class="fa-brands wa fa-whatsapp fa-xl" style="color: #ffffff"></i
-            ></a>
-            
-          </div>
+    <footer class="footer__section site-container">
+      <div class="footer__socials">
+        <a href="" class="footer__socials-item"
+          ><i class="fa-brands ig fa-instagram fa-xl"></i
+        ></a>
+        <a href="" class="footer__socials-item"
+          ><i class="fa-brands fa-x-twitter fa-xl"></i
+        ></a>
+        <a href="" class="footer__socials-item"
+          ><i class="fa-brands wa fa-whatsapp fa-xl"></i
+        ></a>
+      </div>
+      <div class="footer__contact">
+        <div class="footer__contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <p>Contacto@gmail.com</p>
         </div>
-
-        
-        <div class="contact">
-          
-          <i class="fa-solid fa-envelope">   Contacto@gmail.com</i><p></p>
-          <i class="fa-solid fa-phone">    +54 381555362</i><p></p>
-        </div>
-
-       
-        <div class="logo">
-          <img src="assets/revolution-logo-white.png" alt="" srcset="" />
-        <h2 class="footer_title">Revolution</h2>
+        <div class="footer__contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <p>+54 381 5555 362</p>
         </div>
       </div>
+      <div class="footer__logo">
+        <img src="assets/revolution-logo-white.png" alt="" srcset="" />
+        <h2 class="footer__logo-title">Revolution</h2>
+      </div>
     </footer>
-
   </body>
   <script src="/scripts/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper(".swiper", {
-      // Optional parameters
-      direction: "horizontal",
-      loop: true,
-
-      // If we need pagination
-      pagination: {
-        el: ".swiper-pagination",
-      },
-
-      // Navigation arrows
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-
-      // And if we need scrollbar
-      scrollbar: {
-        el: ".swiper-scrollbar",
-      },
-    });
-  </script>
   <script
     src="https://kit.fontawesome.com/e1da6d2f95.js"
     crossorigin="anonymous"
