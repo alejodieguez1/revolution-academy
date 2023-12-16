@@ -13,10 +13,7 @@
 body {
   background: #090907;
 }
-.site-container {
-  padding-left: 20px;
-  padding-right: 20px;
-}
+
 .header {
   height: 80px;
   display: flex;
@@ -179,6 +176,7 @@ body {
 .video__section {
   display: grid;
   justify-items: center;
+  padding-bottom: 60px;
 }
 .video__section-container {
   padding-top: 20px;
@@ -247,17 +245,20 @@ body {
 
 /* footer */
 .footer__section {
-  margin-top: 50px;
+  background: #0f0f0f;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-bottom: 20px;
+  padding: 60px 0;
   gap: 15px;
 }
 .footer__logo img {
   width: 60px;
+}
+.footer__logo-title {
+  text-transform: uppercase;
 }
 .footer__logo {
   display: flex;
@@ -266,28 +267,28 @@ body {
 }
 .footer__socials {
   display: flex;
+  gap: 12px;
 }
-.footer__socials .footer__socials-item {
+.footer__socials-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  margin: 5px;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border-radius: 100px;
   text-decoration: none;
   padding: 8px;
 }
 
-.footer__socials .footer__socials-item i {
+.footer__socials-item i {
   color: #000000;
   font-size: 20px;
   padding: 10px;
   transition: 0.3s;
 }
 .footer__logo,
-.footer__socials .footer__socials-item {
+.footer__socials-item {
   text-align: center;
   color: #ffffff;
 }
@@ -298,7 +299,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
+}
+.footer__contact-item p {
+  text-transform: uppercase;
 }
 @media screen and (min-width: 658px) {
   .hero__container {
@@ -328,10 +332,6 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
-  .site-container {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
   .header {
     padding: 0 100px;
   }
@@ -383,7 +383,7 @@ body {
     max-width: 570px;
   }
   .footer__section {
-    padding: 20px;
+    padding: 100px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -436,5 +436,16 @@ body {
   .footer__socials {
     display: flex;
     justify-content: space-around;
+  }
+}
+
+.site-container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .site-container {
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
