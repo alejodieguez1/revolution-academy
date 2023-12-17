@@ -64,3 +64,24 @@ class SiteVideo extends HTMLElement {
   }
 }
 customElements.define("site-video", SiteVideo);
+
+class Benefits extends HTMLElement {
+  connectedCallback() {
+    this.setupListeners();
+  }
+  setupListeners() {
+    const btn = this.querySelector(".benefits__button");
+    const textCnt = this.querySelector(".benefits__text-container");
+
+    btn.addEventListener("click", () => {
+      textCnt.classList.toggle("active");
+      if (textCnt.classList.contains("active")) {
+        textCnt.style.maxHeight = textCnt.scrollHeight + "px";
+      } else {
+        textCnt.style.maxHeight = "0";
+      }
+    });
+  }
+}
+
+customElements.define("benefit-text", Benefits);
