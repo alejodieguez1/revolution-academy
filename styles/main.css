@@ -308,15 +308,13 @@ body {
 }
 .benefits__section benefit-text {
   display: grid;
-  justify-items: center;
   gap: 10px;
 }
 .benefits__benefit {
   background: #0f0f0f;
   border-radius: 12px;
-  padding: 15px 20px;
+  padding: 15px 0;
   color: #ffffff;
-  text-align: left;
   overflow: hidden;
   display: grid;
   gap: 20px;
@@ -325,6 +323,7 @@ body {
 .benefits__button {
   background: none;
   border: none;
+  padding: 0;
   color: #ffffff;
 }
 .benefits__title {
