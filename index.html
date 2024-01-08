@@ -12,21 +12,24 @@
     />
   </head>
   <body>
-    <header class="header site-container">
-      <div class="header__logo">
-        <img src="assets/revolution-logo-white.png" alt="" srcset="" />
-        <h2 class="header__title">Revolution</h2>
+    <header class="site-header">
+      <div class="header__container site-container">
+        <div class="header__logo">
+          <img src="assets/revolution-logo-white.png" alt="" srcset="" />
+          <h2 class="header__title">Revolution</h2>
+        </div>
+        <div class="header__hamburger">
+          <span class="hamburger__line" id="hamburger__line-1"></span>
+          <span class="hamburger__line" id="hamburger__line-2"></span>
+          <span class="hamburger__line" id="hamburger__line-3"></span>
+        </div>
+        <div class="header__nav-desktop-items">
+          <a href="#" class="header__nav-desktop-item">Inicio</a>
+          <a href="#" class="header__nav-desktop-item">Contacto</a>
+          <a href="#" class="header__nav-desktop-item">Nosotros</a>
+        </div>
       </div>
-      <div class="header__hamburger">
-        <span class="hamburger__line" id="hamburger__line-1"></span>
-        <span class="hamburger__line" id="hamburger__line-2"></span>
-        <span class="hamburger__line" id="hamburger__line-3"></span>
-      </div>
-      <div class="header__nav-desktop-items">
-        <a href="#" class="header__nav-desktop-item">Inicio</a>
-        <a href="#" class="header__nav-desktop-item">Contacto</a>
-        <a href="#" class="header__nav-desktop-item">Nosotros</a>
-      </div>
+      <div class="header__border"></div>
     </header>
     <nav class="header__nav-mobile">
       <div class="header__nav-items">
@@ -47,10 +50,9 @@
       </div>
     </nav>
     <section class="hero__section site-container">
-      <img src="/assets/hero-background.png" alt="" class="hero__section-bg" />
       <div class="hero__container">
-        <h2 class="hero__title">
-          FORMA PARTE DE <span class="hero__title-span">LA REVOLUCIÓN</span>
+        <h2 class="title hero__title">
+          FORMA PARTE DE <span class="title__span">LA REVOLUCIÓN</span>
         </h2>
         <p class="hero__text">
           Aprende como operar en los mercados financieros y convertite en un
@@ -61,6 +63,12 @@
           primer día.
         </p>
       </div>
+      <img
+        src="/assets/hero-background.png"
+        alt=""
+        loading="lazy"
+        class="hero__section-bg"
+      />
     </section>
     <section class="video__section site-container">
       <div class="video__section-container">
@@ -101,73 +109,121 @@
         </site-video>
       </div>
       <div class="cta__section">
-        <h3 class="cta__section-text">
-          ¿Listo para empezar tu viaje hacia el éxito financiero?
+        <h3 class="title cta__title">
+          ¿Listo para empezar tu viaje hacia el
+          <span class="title__span">éxito financiero</span>?
         </h3>
         <a href="" class="cta__section-button">Quiero ser parte</a>
       </div>
     </section>
     <section class="benefits__section site-container">
-      <benefit-text class="benefits__benefit">
-        <button class="benefits__button">
-          <p class="benefits__title">
-            Clases grabadas de 0 a trader profesional
-          </p>
-        </button>
-        <div class="benefits__text-container">
-          <p class="benefits__text">
-            Accede a una extensa biblioteca de más de 50 horas de clases
-            grabadas, que abarcan desde conceptos básicos hasta estrategias
-            avanzadas. Puedes aprender a tu propio ritmo y revisar el material
-            cuando lo necesites.
-          </p>
-        </div>
-      </benefit-text>
-      <benefit-text class="benefits__benefit">
-        <button class="benefits__button">
-          <p class="benefits__title">
-            Clases grabadas de 0 a trader profesional
-          </p>
-        </button>
-        <div class="benefits__text-container">
-          <p class="benefits__text">
-            Accede a una extensa biblioteca de más de 50 horas de clases
-            grabadas, que abarcan desde conceptos básicos hasta estrategias
-            avanzadas. Puedes aprender a tu propio ritmo y revisar el material
-            cuando lo necesites.
-          </p>
-        </div>
-      </benefit-text>
-      <benefit-text class="benefits__benefit">
-        <button class="benefits__button">
-          <p class="benefits__title">
-            Clases grabadas de 0 a trader profesional
-          </p>
-        </button>
-        <div class="benefits__text-container">
-          <p class="benefits__text">
-            Accede a una extensa biblioteca de más de 50 horas de clases
-            grabadas, que abarcan desde conceptos básicos hasta estrategias
-            avanzadas. Puedes aprender a tu propio ritmo y revisar el material
-            cuando lo necesites.
-          </p>
-        </div>
-      </benefit-text>
-      <benefit-text class="benefits__benefit">
-        <button class="benefits__button">
-          <p class="benefits__title">
-            Clases grabadas de 0 a trader profesional
-          </p>
-        </button>
-        <div class="benefits__text-container">
-          <p class="benefits__text">
-            Accede a una extensa biblioteca de más de 50 horas de clases
-            grabadas, que abarcan desde conceptos básicos hasta estrategias
-            avanzadas. Puedes aprender a tu propio ritmo y revisar el material
-            cuando lo necesites.
-          </p>
-        </div>
-      </benefit-text>
+      <h3 class="title benefits__title">
+        Conoce nuestros <span class="title__span">Servicios</span>
+      </h3>
+      <div class="benefits__container">
+        <benefit-text class="benefit__container">
+          <button class="benefit__button">
+            <p class="benefit__title">
+              Clases grabadas de 0 a trader profesional
+            </p>
+            <svg
+              width="8"
+              viewBox="0 0 6 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="benefit__arrow"
+            >
+              <path
+                d="M3.375 1C3.375 0.792893 3.20711 0.625 3 0.625C2.79289 0.625 2.625 0.792893 2.625 1L3.375 1ZM2.73484 15.2652C2.88128 15.4116 3.11872 15.4116 3.26517 15.2652L5.65165 12.8787C5.7981 12.7322 5.7981 12.4948 5.65165 12.3483C5.5052 12.2019 5.26777 12.2019 5.12132 12.3483L3 14.4697L0.87868 12.3483C0.732234 12.2019 0.494797 12.2019 0.34835 12.3483C0.201903 12.4948 0.201903 12.7322 0.34835 12.8787L2.73484 15.2652ZM2.625 1L2.625 15L3.375 15L3.375 1L2.625 1Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <div class="benefit__text-container">
+            <p class="benefit__text">
+              Accede a una extensa biblioteca de más de 50 horas de clases
+              grabadas, que abarcan desde conceptos básicos hasta estrategias
+              avanzadas. Puedes aprender a tu propio ritmo y revisar el material
+              cuando lo necesites.
+            </p>
+          </div>
+        </benefit-text>
+        <benefit-text class="benefit__container">
+          <button class="benefit__button">
+            <p class="benefit__title">Sesiones en Vivo</p>
+            <svg
+              width="8"
+              viewBox="0 0 6 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="benefit__arrow"
+            >
+              <path
+                d="M3.375 1C3.375 0.792893 3.20711 0.625 3 0.625C2.79289 0.625 2.625 0.792893 2.625 1L3.375 1ZM2.73484 15.2652C2.88128 15.4116 3.11872 15.4116 3.26517 15.2652L5.65165 12.8787C5.7981 12.7322 5.7981 12.4948 5.65165 12.3483C5.5052 12.2019 5.26777 12.2019 5.12132 12.3483L3 14.4697L0.87868 12.3483C0.732234 12.2019 0.494797 12.2019 0.34835 12.3483C0.201903 12.4948 0.201903 12.7322 0.34835 12.8787L2.73484 15.2652ZM2.625 1L2.625 15L3.375 15L3.375 1L2.625 1Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <div class="benefit__text-container">
+            <p class="benefit__text">
+              Únete a nuestras sesiones en vivo cada día de la semana, de lunes
+              a viernes. Experimenta la emoción y la interactividad mientras
+              nuestros expertos comparten análisis de mercado en tiempo real,
+              responden a tus preguntas y discuten las últimas tendencias.
+            </p>
+          </div>
+        </benefit-text>
+        <benefit-text class="benefit__container">
+          <button class="benefit__button">
+            <p class="benefit__title">Canal de Señales</p>
+            <svg
+              width="8"
+              viewBox="0 0 6 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="benefit__arrow"
+            >
+              <path
+                d="M3.375 1C3.375 0.792893 3.20711 0.625 3 0.625C2.79289 0.625 2.625 0.792893 2.625 1L3.375 1ZM2.73484 15.2652C2.88128 15.4116 3.11872 15.4116 3.26517 15.2652L5.65165 12.8787C5.7981 12.7322 5.7981 12.4948 5.65165 12.3483C5.5052 12.2019 5.26777 12.2019 5.12132 12.3483L3 14.4697L0.87868 12.3483C0.732234 12.2019 0.494797 12.2019 0.34835 12.3483C0.201903 12.4948 0.201903 12.7322 0.34835 12.8787L2.73484 15.2652ZM2.625 1L2.625 15L3.375 15L3.375 1L2.625 1Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <div class="benefit__text-container">
+            <p class="benefit__text">
+              Mantente un paso adelante con nuestro exclusivo canal de señales.
+              Recibe alertas en tiempo real sobre oportunidades de trading
+              potenciales, análisis de mercado y recomendaciones de nuestros
+              experimentados analistas.
+            </p>
+          </div>
+        </benefit-text>
+        <benefit-text class="benefit__container">
+          <button class="benefit__button">
+            <p class="benefit__title">Revolution App</p>
+            <svg
+              width="8"
+              viewBox="0 0 6 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="benefit__arrow"
+            >
+              <path
+                d="M3.375 1C3.375 0.792893 3.20711 0.625 3 0.625C2.79289 0.625 2.625 0.792893 2.625 1L3.375 1ZM2.73484 15.2652C2.88128 15.4116 3.11872 15.4116 3.26517 15.2652L5.65165 12.8787C5.7981 12.7322 5.7981 12.4948 5.65165 12.3483C5.5052 12.2019 5.26777 12.2019 5.12132 12.3483L3 14.4697L0.87868 12.3483C0.732234 12.2019 0.494797 12.2019 0.34835 12.3483C0.201903 12.4948 0.201903 12.7322 0.34835 12.8787L2.73484 15.2652ZM2.625 1L2.625 15L3.375 15L3.375 1L2.625 1Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <div class="benefit__text-container">
+            <p class="benefit__text">
+              Lleva todos nuestros servicios contigo a donde vayas con nuestra
+              aplicación móvil. Accede a las clases grabadas, participa en las
+              sesiones en vivo y recibe notificaciones instantáneas del canal de
+              señales, todo desde la comodidad de tu dispositivo móvil.
+            </p>
+          </div>
+        </benefit-text>
+      </div>
     </section>
     <section class="testimonials__section">
       <div class="swiper">
