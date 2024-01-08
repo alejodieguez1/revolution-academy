@@ -70,19 +70,19 @@ body {
   width: 60px;
 }
 .header__nav-mobile {
-  height: 0px;
+  height: 100vh;
   padding-top: 100px;
   position: fixed;
-  opacity: 0;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   background: #0f0f0f;
-  transition: 0.5s;
+  transition: 0.3s;
   overflow: hidden;
   z-index: 20;
   box-shadow: 0px 2px 5px #000000;
+  transform: translateX(100%);
 }
 .header__nav-items {
   margin: 0;
@@ -108,8 +108,8 @@ body {
   font-family: "Mulish Bold";
 }
 .header__nav-mobile.active {
-  height: 100vh;
-  opacity: 1;
+  transform: translateX(0px);
+  transition: 0.3s;
 }
 .header__nav-mobile.active .header__nav-items {
   opacity: 1;
